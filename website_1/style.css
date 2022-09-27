@@ -1,0 +1,241 @@
+@import url(fonts.css);
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS VARIABLES */
+:root {
+  /*global variable*/
+  --navbar-height: 49px;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: var(--navbar-height);
+  position: sticky;
+  top:0px;
+}
+
+#navbar::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: -1 ;
+  opacity: 0.5;
+}
+
+#navbar a {
+  padding: 0 10px;
+  font-size: 0.9rem;
+}
+
+#navbar a:hover {
+  color: black;
+  background-color: rgb(255, 224, 224);
+  border-radius: 10px;
+}
+
+#logo {
+  margin: 10px 25px;
+}
+
+#logo img {
+  height: 44px;
+  padding: 4px 10px 0px 10px;
+
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+  font-size: 1.3rem;
+}
+
+#navbar ul li a {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+}
+
+/* different sections */
+#home {
+  height: 400px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: rgb(254, 237, 237);
+}
+
+#home::before {
+  content: "";
+  background: url(images/spaghetti-1932466.jpg) no-repeat center center/cover;
+  position: absolute;
+  height: 450px;
+  width: 100%;
+  opacity: 0.85;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  z-index: -3;
+}
+
+.middle {
+  border: 1px solid black;
+  width: 500px;
+  background-color: pink;
+  text-align: center;
+  margin: 0px 20px 20px 20px;
+  padding: 30px;
+  border-radius: 30px;
+}
+
+#middle_font {
+  font-family: 'Teko', sans-serif;
+  font-size: 3.8rem;
+  text-align: center;
+}
+
+#dev_middle {
+  display: flex;
+  justify-content: space-around;
+}
+
+#clients {
+  position: relative;
+  text-align: center;
+  z-index:-1;
+}
+
+/* #clients::before {
+  content: "";
+  position: absolute;
+  height:445.5px;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  opacity: 0.5;
+  background: url('images/casserole-dish-2776735.jpg')no-repeat center center/cover;
+  z-index: -1;
+} */
+
+.flex_image {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgs_clients {
+  padding: 10px;
+  margin: 10px;
+  /* border: 1px solid black; */
+}
+
+#contact_us {
+  position: relative;
+  padding: 34px;
+  z-index: :-1;
+}
+
+#contact_us::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 550px;
+  top: 0px;
+  right: 0px;
+  background: url(images/envelopes-6919301.jpg)no-repeat center center/cover;
+  z-index: -1;
+  opacity: 1;
+}
+
+.contact_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 34px;
+}
+
+.contact_box input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+
+}
+
+footer {
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+/*utility classes*/
+.h-primary {
+  font-family: 'Teko', sans-serif;
+  font-size: 3.8rem;
+  padding: 12px;
+}
+
+.btn {
+  background-color: brown;
+  padding: 6px 20px;
+  border: 2px solid white;
+  margin: 17px;
+  font-size: 1rem;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(129, 31, 31);
+}
+
+/* media queries */
+@media only screen and (max-width:1343px) {
+  #clients::before {
+    content: "";
+    position: absolute;
+    height: 602.5px;
+    /*602.5*/
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    opacity: 0.5;
+    background: url('images/casserole-dish-2776735.jpg')no-repeat center center/cover;
+    z-index: -1;
+  }
+}
+
+@media only screen and (min-width:1344px) {
+  #clients::before {
+    content: "";
+    position: absolute;
+    height: 445.5px;
+    /*602.5*/
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    opacity: 0.5;
+    background: url('images/casserole-dish-2776735.jpg')no-repeat center center/cover;
+    z-index: -1;
+  }
+}
